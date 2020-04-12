@@ -6,11 +6,13 @@
 
 // Server settings
 var hostname = 'localhost';
-var port = 8080;
+var port = 8081;
 
 var express = require('express');
+var cors = require('cors')
 
 var app = express();
+app.use(cors())
 
 // All json data was extracted from https://github.com/sin0light/api-kaamelott/
 const quotes = require('./data/quotes.json');
