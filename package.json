@@ -1,0 +1,22 @@
+{
+  "name": "kaamelott-api",
+  "version": "1.0.0",
+  "description": "A very simple API in NodeJS to get quotes from the french TV series Kaamelott",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthur-reiter/kaamelott-api.git"
+  },
+  "author": "Arthur REITER",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/arthur-reiter/kaamelott-api/issues"
+  },
+  "homepage": "https://github.com/arthur-reiter/kaamelott-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
