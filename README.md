@@ -18,12 +18,19 @@ Get a specific quote by id
 
 ## Set up a server
 Juste clone the repo
+
 `git clone https://github.com/arthur-reiter/kaamelott-api.git`
+
 Go into the server directory
+
 `cd kaamelott-api/`
+
 Install node modules
+
 `npm install`
+
 Start the server
+
 `node index.js`
 
 ## Sample response
