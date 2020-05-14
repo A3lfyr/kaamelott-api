@@ -12,7 +12,8 @@ var express = require('express');
 var cors = require('cors')
 
 var app = express();
-app.use(cors())
+app.use(cors());
+app.use(express.static('public'));
 
 // All json data was extracted from https://github.com/sin0light/api-kaamelott/
 const quotes = require('./data/quotes.json');
@@ -22,10 +23,11 @@ const nb_quotes = 776;
 
 var myRouter = express.Router();
 
+
 // Returns the home page
 myRouter.route('/')
 	.get(function (req, res) {
-		res.sendfile('index.html');
+		res.sendFile('index.html');
 	});
 
 // Returns a random quote

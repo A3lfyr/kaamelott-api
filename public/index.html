@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kaamelott API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="src/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<style>
+    html { 
+    margin:0;
+    padding:0;
+    background: url(src/bg.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+  }
+</style>
+
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-head">
+          <header class="navbar">
+            <div class="container">
+              <div class="navbar-brand">
+                <a class="navbar-item">
+                  <img src="src/logo.png" alt="Logo">
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div id="navbarMenuHeroC" class="navbar-menu">
+                <div class="navbar-end">
+                  <a class="navbar-item" href="https://github.com/arthur-reiter/kaamelott-api/wiki">
+                    Documentation
+                  </a>
+                  <span class="navbar-item">
+                    <a class="button" href="https://github.com/arthur-reiter/kaamelott-api">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Download</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+          <div class="container has-text-centered blockquote">
+            <div>
+              <blockquote>
+                <p id="quote"></p>
+                <span id="author"></span>
+                <p id="infoquote"></p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+        </div>
+      </section>
+      <script>
+        fetch("http://localhost:8081/api/random")
+          .then(result => {
+              return result.json();
+          })
+          .then(data => {
+              document.getElementById("quote").textContent = data.citation;
+              document.getElementById("author").textContent = data.infos.personnage;
+              document.getElementById("infoquote").textContent = data.infos.saison + ", " + data.infos.episode;
+          })
+          .catch(console.error)
+      </script>
+
+</body>
+
+</html>

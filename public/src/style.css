@@ -1,0 +1,52 @@
+html {
+  margin: 0;
+  padding: 0;
+  background: url(bg.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
+
+.navbar-item img {
+  max-height: 4rem;
+}
+
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  background-color: transparent;
+  color: black
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+blockquote {
+  color: black;
+  font-family: 'Marck Script', cursive;
+  font-size: 1.5em;
+}
+
+#quote {
+  font-size: 1.1em;
+}
+
+#infoquote {
+  font-size: 0.7em;
+}
+
+#author:before{
+  content: '– ';
+}
+
+@media screen and (min-width: 1216px) {
+  .blockquote {
+      max-width: 800px;
+  }
+}
