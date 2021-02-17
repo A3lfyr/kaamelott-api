@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && git pull > null
+          script: cd ${{ secrets.PROJECT_PATH }} && git pull > /dev/null
           
       - name: Install the new version
         uses: appleboy/ssh-action@master
@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && npm install > null
+          script: cd ${{ secrets.PROJECT_PATH }} && npm install > /dev/null
           
       - name: Restarting node app
         uses: appleboy/ssh-action@master
@@ -38,4 +38,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && pm2 restart kaamelottAPI > null
+          script: cd ${{ secrets.PROJECT_PATH }} && pm2 restart kaamelottAPI > /dev/null
