@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download the new version
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: cd ${{ secrets.PROJECT_PATH }} && git pull
+          
+      - name: Install the new version
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: cd ${{ secrets.PROJECT_PATH }} && npm install
+          
+      - name: Restarting node app
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: cd ${{ secrets.PROJECT_PATH }} && pm2 restart kaamelottAPI
