@@ -7,6 +7,19 @@
 // Server settings
 var hostname = 'localhost';
 var port = 8081;
+// Check Arguments
+var Args = process.argv.slice(2);
+if(Args[0] == "-port" || Args[0] == "-p")
+{
+	if(parseInt(Args[1]) > 1023 && parseInt(Args[1]) < 49152)
+	{
+		port = Args[1];
+	} else {
+		console.log("/!\\ Port not recognized, use default port")
+	}
+		
+} 
+
 
 var express = require('express');
 var cors = require('cors')
