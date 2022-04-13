@@ -155,7 +155,7 @@ router.route('/quotes/book/:book_number')
 		}
 	});
 
-// Returns all quotes from a book
+// Returns the number of quotes from a book
 router.route('/quotes/book/:book_number/nb') 
 	.get(function (req, res) {
 		let bookName = getBooknameByBookNumber(req.params.book_number)

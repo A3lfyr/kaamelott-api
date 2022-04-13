@@ -4,17 +4,63 @@ A very simple API in NodeJS to get quotes from the french TV series Kaamelott
 
 ## Usage
 
+### Random quote
+
 Get a random quote
 
-> GET /api/random
+> GET /quote/random
 
-Get all quotes
+Get a random quote from a character
 
-> GET /api/all
+> GET /quote/random/character/`character_name`
+
+Get a random quote from a book
+
+> GET /quote/random/book/`book_number`
+
+Geta random quote from a character in a book
+
+> GET /quote/random/character/`character_name`/book/`book_number`
 
 Get a specific quote by id
 
 > GET /api/quote/`quote_id`
+
+### Quotes
+
+Get all quotes
+
+> GET /quotes
+
+Get all quotes from a character
+
+> GET /quotes/character/:character_name
+
+Get the number of quotes from a character
+
+> GET /quotes/character/:character_name/nb
+
+Get all quotes from a book
+
+> GET '/quotes/book/:book_number
+
+Get the number of quotes from a book
+
+> GET'/quotes/book/:book_number/nb
+
+Get the number of quotes
+
+> GET /quotes/nb
+
+### Casting
+
+Get the list of characters
+
+> GET /characters
+
+Get the casting
+
+> GET /casting
 
 ## Set up a server
 
