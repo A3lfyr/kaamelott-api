@@ -32,7 +32,7 @@ Install node modules
 
 Start the server
 
-`node index.js [-p portNumber]`
+`node index.ts [-p portNumber]`
 
 ## Sample response
 
