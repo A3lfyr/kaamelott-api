@@ -5,7 +5,7 @@
  */
 
 // Server settings
-var hostname = 'localhost';
+var hostname = '0.0.0.0';
 var port = 8081;
 // Check Arguments
 var Args = process.argv.slice(2);
