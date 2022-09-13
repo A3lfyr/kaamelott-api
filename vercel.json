@@ -5,7 +5,7 @@
     "outputDirectory": "public",
     "functions": {
         "index.ts": {
-          "memory": 3008
+          "memory": 1024
         }
     },
     "routes": [
