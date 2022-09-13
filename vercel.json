@@ -2,26 +2,32 @@
     "version": 2,
     "builds": [
       {
-        "src": "index.ts",
+        "src": ".",
         "use": "@now/node"
       }
     ],
+    "installCommand": "npm install",
+    "outputDirectory": "public",
     "routes": [
-      {
-        "src": "/quote/(.*)",
-        "dest": "index.ts"
-      },
-      {
-        "src": "/quotes/(.*)",
-        "dest": "index.ts"
-      },
-      {
-        "src": "/characters/(.*)",
-        "dest": "index.ts"
-      },
-      {
-        "src": "/casting/(.*)",
-        "dest": "index.ts"
-      }
+        {
+            "src": "/",
+            "dest": "public/index.html"
+        },
+        {
+            "src": "/quote/(.*)",
+            "dest": "index.ts"
+        },
+        {
+            "src": "/quotes/(.*)",
+            "dest": "index.ts"
+        },
+        {
+            "src": "/characters/(.*)",
+            "dest": "index.ts"
+        },
+        {
+            "src": "/casting/(.*)",
+            "dest": "index.ts"
+        }
     ]
   }
