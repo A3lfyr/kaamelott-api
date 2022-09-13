@@ -8,7 +8,19 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/quote/(.*)",
+        "dest": "index.ts"
+      },
+      {
+        "src": "/quotes/(.*)",
+        "dest": "index.ts"
+      },
+      {
+        "src": "/characters/(.*)",
+        "dest": "index.ts"
+      },
+      {
+        "src": "/casting/(.*)",
         "dest": "index.ts"
       }
     ]
