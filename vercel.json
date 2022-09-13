@@ -3,6 +3,11 @@
     "framework": null,
     "installCommand": "npm install",
     "outputDirectory": "public",
+    "functions": {
+        "index.ts": {
+          "memory": 3008
+        }
+    },
     "routes": [
         {
             "src": "/",
