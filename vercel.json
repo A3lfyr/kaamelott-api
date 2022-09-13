@@ -10,10 +10,6 @@
     "outputDirectory": "public",
     "routes": [
         {
-            "src": "/",
-            "dest": "public/index.html"
-        },
-        {
             "src": "/quote/(.*)",
             "dest": "index.ts"
         },
