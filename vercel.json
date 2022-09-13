@@ -3,11 +3,12 @@
     "framework": null,
     "installCommand": "npm install",
     "outputDirectory": "public",
-    "functions": {
-        "index.ts": {
-          "memory": 1024
+    "builds": [
+        {
+          "src": "index.js",
+          "use": "@now/node"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/",

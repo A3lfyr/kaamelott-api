@@ -197,6 +197,9 @@ app.listen(port, hostname, function () {
 });
 
 
+module.exports = app
+
+
 function randomQuote(quotesToRandom) {
     let nb = quotesToRandom.length;
     let chosen = Math.floor(Math.random() * Math.floor(nb));
