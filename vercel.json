@@ -5,7 +5,7 @@
     "outputDirectory": "public",
     "builds": [
         {
-          "src": "index.js",
+          "src": "index.ts",
           "use": "@now/node"
         }
     ],
