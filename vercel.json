@@ -1,11 +1,5 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": ".",
-        "use": "@now/node"
-      }
-    ],
     "framework": null,
     "installCommand": "npm install",
     "outputDirectory": "public",
