@@ -6,9 +6,14 @@
         "use": "@now/node"
       }
     ],
+    "framework": null,
     "installCommand": "npm install",
     "outputDirectory": "public",
     "routes": [
+        {
+            "src": "/",
+            "dest": "public/index.html"
+        },
         {
             "src": "/quote/(.*)",
             "dest": "index.ts"
