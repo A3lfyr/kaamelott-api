@@ -4,7 +4,6 @@
  * Documentation : https://github.com/arthur-reiter/kaamelott-api
  */
 
-import path from "path";
 
 // Server settings
 var hostname = '0.0.0.0';
@@ -48,7 +47,7 @@ var router = express.Router();
 // Returns the home page
 router.route('/')
 	.get(function (req, res) {
-		res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+		res.sendFile('index.html', {root: __dirname + '/public'});
 	});
 
 // Returns a random quote
